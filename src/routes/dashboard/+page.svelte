@@ -5,4 +5,5 @@
 </script>
 
 <h1>This is dashboard</h1>
-<h2>Welcome {data.user.email}</h2>
+<h2>Welcome {data.user.name}</h2>
+<form method="POST" action="/logout"><button type="submit">Logout</button></form>

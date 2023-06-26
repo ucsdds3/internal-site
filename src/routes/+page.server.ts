@@ -26,7 +26,6 @@ export const actions: Actions = {
 
             throw redirect(302, "/dashboard")
         } catch (err) {
-            console.log(err)
             return fail(400, {
                 message: "Incorrect Username/Password"
             })
