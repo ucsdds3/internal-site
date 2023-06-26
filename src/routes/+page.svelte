@@ -1,2 +1,14 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+
+
+<h1>This is Login</h1>
+<form action="?/login" method="POST">
+    <label>
+        UCSD Email:
+        <input type="email" name="email" />
+    </label>
+    <label>
+        Password:
+        <input type="password" name="password" />
+    </label>
+    <button type="submit">Login</button>
+</form>
