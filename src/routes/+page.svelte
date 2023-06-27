@@ -12,3 +12,15 @@
     </label>
     <button type="submit">Login</button>
 </form>
+
+<style global>
+    :global(body) {
+        /* General Styling */
+        box-sizing: border-box;
+        margin: 0;
+
+        /* Colors */
+        --base-bg: #2C2C2C;
+        --base-mod: #191919;
+    }
+</style>
