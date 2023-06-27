@@ -34,9 +34,11 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@iconify/json": "^2.2.83",
 		"@lucia-auth/adapter-prisma": "^2.0.0",
 		"@lucia-auth/sveltekit": "^0.6.11",
 		"@prisma/client": "4.16.1",
-		"lucia-auth": "^1.8.0"
+		"lucia-auth": "^1.8.0",
+		"unplugin-icons": "^0.16.3"
 	}
 }
