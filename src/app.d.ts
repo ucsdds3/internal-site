@@ -13,7 +13,12 @@ declare global {
 
 	declare namespace Lucia {
 		type Auth = import('$lib/server/lucia').Auth
-		type UserAttributes = PrismaClient['AuthUser']
+		type UserAttributes = {
+			name: string,
+			email: string,
+			staff: boolean,
+			subcom: string,
+		}
 	}
 }
 

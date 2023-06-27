@@ -1,8 +1,9 @@
 import { fail, redirect } from "@sveltejs/kit";
-import { auth } from "$server/lucia";
+import { auth } from "$lib/server/lucia";
 import type { Actions, PageServerLoad } from './$types'
 
 export const load: PageServerLoad = async ({ locals }) => {
+    throw redirect(302, "")
     const session = await locals.auth.validate()
     if (session) {
         throw redirect(302, "/dashboard")
