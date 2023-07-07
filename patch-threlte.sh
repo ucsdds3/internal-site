@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 filepath="node_modules/three/examples/jsm/objects"
 target="GroundProjectedSkybox"

@@ -12,7 +12,7 @@
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"postinstall": "./patch-threlte.sh && prisma generate"
+		"postinstall": "sh ./patch-threlte.sh && prisma generate"
 	},
 	"devDependencies": {
 		"@dimforge/rapier3d-compat": "^0.11.2",
