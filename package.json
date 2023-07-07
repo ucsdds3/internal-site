@@ -50,7 +50,7 @@
 		"@iconify/json": "^2.2.83",
 		"@lucia-auth/adapter-prisma": "^2.0.0",
 		"@lucia-auth/sveltekit": "^0.6.11",
-		"@prisma/client": "4.16.1",
+		"@prisma/client": "4.16.2",
 		"dayjs": "^1.11.8",
 		"lucia-auth": "^1.8.0",
 		"svelte-file-dropzone": "^2.0.1",
