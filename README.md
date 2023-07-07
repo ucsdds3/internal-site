@@ -15,17 +15,16 @@ npm install -g pnpm
 ```bash
 pnpm install
 ```
-4. The following step is if Threlte v5 is the latest version. At the time of writing, there is [issue](https://github.com/threlte/threlte/issues/356) in which you will need to modify one of the dependency files. Go into `node_modules/three/examples/jsm/objects/` and change `GroundProjectedSkybox` into `GroundProjectedEnv`. You will need to do this to the filename, the class name, and the export at the bottom.
-5. Create a `.env` file and paste in the following contents
+4. Create a `.env` file and paste in the following contents
 ```env
 # If you don't know the MongoDB connection, contact the Infrastrcture Director.
 DATABASE_URL="<DB_URL_HERE>"
 ```
-6. Generate the database schema for typescript IntelliSense.
+5. Generate the database schema for typescript IntelliSense.
 ```bash
 npx primsa generate
 ```
-7. Run locally using `pnpm` and navigate to localhost:5173.
+6. Run locally using `pnpm` and navigate to localhost:5173.
 ```bash
 pnpm run dev
 ```
