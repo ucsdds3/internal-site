@@ -3,7 +3,7 @@ import { auth } from "$lib/server/lucia";
 import type { Actions, PageServerLoad } from './$types'
 
 export const load: PageServerLoad = async ({ locals }) => {
-    throw redirect(302, "")
+    // throw redirect(302, "")
     const session = await locals.auth.validate()
     if (session) {
         throw redirect(302, "/dashboard")
@@ -31,6 +31,7 @@ export const actions: Actions = {
                     email: emailInput,
                     staff: false,
                     subcom: "",
+                    createdEvents: {},
                 }
             })
             const session = await auth.createSession(user.userId);
