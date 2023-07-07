@@ -9,9 +9,9 @@
         })
       }
     }
-  </script>
+</script>
   
-  <svelte:head>
+<svelte:head>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-69FXYKXF60">
@@ -26,4 +26,4 @@
       gtag('js', new Date())
       gtag('config', 'G-69FXYKXF60')
     </script>
-  </svelte:head>
+</svelte:head>
