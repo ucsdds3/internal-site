@@ -1,3 +1,8 @@
+<script lang="ts">
+    import Analytics from '$lib/client/analytics.svelte'
+</script>
+
+<Analytics />
 <!-- 
     This layout exists with the sole purpose of carying global styles
     to the rest of the pages. Define colors and global variables here.
