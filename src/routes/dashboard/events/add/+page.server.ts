@@ -44,7 +44,9 @@ export const actions: Actions = {
                     title: title,
                     datetime: eventDatetime,
                     description: description,
-                    editedAt: []
+                    editedAt: [],
+                    location: location,
+                    registrationLink: registrationLink
                 }
             })
             let dbRes2 = await prisma.authUser.update({
