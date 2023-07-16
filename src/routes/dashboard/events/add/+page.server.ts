@@ -2,6 +2,7 @@ import { fail, redirect } from "@sveltejs/kit";
 import type { PageServerLoad, Actions } from "./$types";
 import type { Event } from "$lib/server/interfaces"
 import { prisma } from "$lib/server/prisma";
+import { NotFoundError } from "@prisma/client/runtime";
 
 export const load: PageServerLoad = async ({ locals }) => {
     const { user } = await locals.auth.validateUser()
@@ -34,6 +35,12 @@ export const actions: Actions = {
         
         // // Create event and update users created events in DB
         try {
+            let presenter = prisma.authUser.findFirstOrThrow({
+                where: {
+                    email: presenters
+                }
+            })
+            
             let dbRes = await prisma.event.create({
                 data: {
                     creator: {
@@ -46,7 +53,8 @@ export const actions: Actions = {
                     description: description,
                     editedAt: [],
                     location: location,
-                    registrationLink: registrationLink
+                    presenters: (presenter === null) ? "" : (await presenter).id,
+                    registrationLink: (registrationLink === null) ? "" : registrationLink
                 }
             })
             let dbRes2 = await prisma.authUser.update({
